@@ -62,12 +62,17 @@
         (format t "Year ~d~%" (Event-Year object))
     )
 
-    (defmethod getYear ((object Event))
-        (format t "Year ~d~%" (Event-Year object))
+    (defmethod getHour ((object Event))
+        (format t "Hour ~d~%" (Event-Hour object))
     )
 
-     (defmethod getHour ((object Event))
-        (format t "Hour ~d~%" (Event-Hour object))
+    (defmethod getEvent ((object Event))
+    (format t "Year: ~d~%" (Event-Year item))
+    (format t "Month: ~d~%" (Event-Month item))
+    (format t "Day: ~d~%" (Event-Day item))
+    (format t "Hour: ~d~%" (Event-hour item))
+    (format t "Name: ~d~%" (Event-Name item))
+    (format t "Notes: ~d~%" (Event-Notes item))
     )
 
     (setf item (make-instance 'Event))
@@ -80,13 +85,8 @@
     (setf (Event-Notes item) "This is text filler 2")
 
 
-    (format t "Year ~d~%" (Event-Year item))
-    (format t "Month ~d~%" (Event-Month item))
-    (format t "Day ~d~%" (Event-Day item))
-    (format t "hour ~d~%" (Event-Hour item))
-    (format t "Name ~d~%" (Event-Name item))
-    (format t "Description/Notes ~d~%" (Event-Notes item))
-
+    
+    (getEvent item)
     (getHour item)
     (print (timeUntil item 14))
     (getHour item)
