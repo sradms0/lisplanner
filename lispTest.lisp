@@ -84,6 +84,21 @@
     (setf (Event-Notes item) "This is text filler")
     (setf (Event-Notes item) "This is text filler 2")
 
+    (setf eventOne (make-instance 'Event))
+    (setf (Event-Year eventOne) 2022)
+    (setf (Event-Month eventOne) 13)
+    (setf (Event-Day eventOne) 15)
+    (setf (Event-hour eventOne) 10)
+    (setf (Event-Name eventOne) "Birthday")
+    (setf (Event-Notes eventOne) "This is text filler")
+
+    (setf eventTwo (make-instance 'Event))
+    (setf (Event-Year eventTwo) 2023)
+    (setf (Event-Month eventTwo) 5)
+    (setf (Event-Day eventTwo) 20)
+    (setf (Event-hour eventTwo) 5)
+    (setf (Event-Name eventTwo) "School")
+    (setf (Event-Notes eventTwo) "This is text filler")
 
     ;; (getEvent item)
     ;; (getHour item)
