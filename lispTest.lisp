@@ -67,12 +67,12 @@
     )
 
     (defmethod getEvent ((object Event))
-    (format t "Year: ~d~%" (Event-Year item))
-    (format t "Month: ~d~%" (Event-Month item))
-    (format t "Day: ~d~%" (Event-Day item))
-    (format t "Hour: ~d~%" (Event-hour item))
-    (format t "Name: ~d~%" (Event-Name item))
-    (format t "Notes: ~d~%" (Event-Notes item))
+        (format t "Year: ~d~%" (Event-Year object))
+        (format t "Month: ~d~%" (Event-Month object))
+        (format t "Day: ~d~%" (Event-Day object))
+        (format t "Hour: ~d~%" (Event-hour object))
+        (format t "Name: ~d~%" (Event-Name object))
+        (format t "Description/Notes: ~d~%" (Event-Notes object))
     )
 
     (setf item (make-instance 'Event))
@@ -85,12 +85,23 @@
     (setf (Event-Notes item) "This is text filler 2")
 
 
-    
+    ;; (getEvent item)
+    ;; (getHour item)
+    ;; (print (timeUntil item 14))
+    ;; (getHour item)
+    ;; (print (timeUntil item 12))
+    ;; (getHour item)
+    ;; (print (timeUntil item 14))
+    ;; (getHour item)
+
     (getEvent item)
-    (getHour item)
-    (print (timeUntil item 14))
-    (getHour item)
-    (print (timeUntil item 12))
-    (getHour item)
-    (print (timeUntil item 14))
-    (getHour item)
+    (format t "Time Until Event: ~d~%" (timeUntil item 17)) ;;Unit test One
+    (getYear item)
+
+    (getEvent eventOne)
+    (format t "Time Until Event: ~d~%" (timeUntil eventOne 19)) ;;Unit test two
+    (getYear eventOne)
+
+    (getEvent eventTwo)
+    (format t "Time Until Event: ~d~%" (timeUntil eventTwo 15)) ;;Unit test three
+    (getYear eventTwo)
