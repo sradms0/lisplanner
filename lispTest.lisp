@@ -1,50 +1,4 @@
-;; (defun adder (x y z)
-;;     (+ x y z)
-;; )
-
-;; (print (adder 8 6 7))
-
-;; (defclass person()
-;;   ((name
-;;      :initarg :name
-;;      :accessor name)
-;;    (lisper
-;;      :initform nil
-;;      :accessor lisper)))
-
-;; (defvar p1 (make-instance 'person :name "me"))
-;; (print (name p1))
-
-;; (defclass child (person)
-;;   ((can-walk-p 
-;;      :accessor can-walk-p
-;;      :initform t)))
-
-;; (print (can-walk-p (make-instance 'child)))
-
-;; (defclass Event()
-;;   ((year
-;;      :initarg :year
-;;      :accessor year)
-;;    (month
-;;      :initform :month
-;;      :accessor month)
-;;     (day
-;;      :initarg :day
-;;      :accessor day)
-;;     (hour
-;;      :initarg :hour
-;;      :accessor hour)
-;;     (name
-;;      :initarg :name
-;;      :accessor name)
-;;     (notes
-;;      :initarg :name
-;;      :accessor notes)))
-
-
-
-     (defclass Event ()
+(defclass Event ()
    (  (Year :accessor Event-Year)
       (Month :accessor Event-Month)
       (Day :accessor Event-Day)
@@ -99,15 +53,6 @@
     (setf (Event-hour eventTwo) 5)
     (setf (Event-Name eventTwo) "School")
     (setf (Event-Notes eventTwo) "This is text filler")
-
-    ;; (getEvent item)
-    ;; (getHour item)
-    ;; (print (timeUntil item 14))
-    ;; (getHour item)
-    ;; (print (timeUntil item 12))
-    ;; (getHour item)
-    ;; (print (timeUntil item 14))
-    ;; (getHour item)
 
     (getEvent item)
     (format t "Time Until Event: ~d~%" (timeUntil item 17)) ;;Unit test One
