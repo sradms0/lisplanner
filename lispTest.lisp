@@ -54,14 +54,18 @@
     (setf (Event-Name eventTwo) "School")
     (setf (Event-Notes eventTwo) "This is text filler")
 
-    (getEvent item)
-    (format t "Time Until Event: ~d~%" (timeUntil item 17)) ;;Unit test One
-    (getYear item)
+    ;;(getEvent item)
+    (format t "Time Until Event Expected (True): ~d~%" (equal(timeUntil item 17) 21)) ;;Unit test One 
+    ;; (getYear item)
 
-    (getEvent eventOne)
-    (format t "Time Until Event: ~d~%" (timeUntil eventOne 19)) ;;Unit test two
-    (getYear eventOne)
-
-    (getEvent eventTwo)
-    (format t "Time Until Event: ~d~%" (timeUntil eventTwo 15)) ;;Unit test three
-    (getYear eventTwo)
+    
+    ;;(getEvent eventOne)
+    ;;(format t "Time Until Event: ~d~%" (timeUntil eventOne 19)) ;;Unit test two
+    (format t "Time Until Event Expected (True): ~d~%" (equal(timeUntil eventOne 19) 15)) ;;Unit test Two 
+    (format t "Time Until Event Expected (False): ~d~%" (equal(timeUntil eventOne 19) 11)) ;;Unit test Two 
+    ;; (getYear eventOne)
+    
+    ;;(getEvent eventTwo)
+    ;; (print(equal(timeUntil eventTwo 15) 14)) ;; T
+    (format t "Time Until Event Expected (True): ~d~%" (equal(timeUntil eventTwo 15) 14)) ;;Unit test three 
+    ;; (getYear eventTwo)
